@@ -1,0 +1,240 @@
+<!--
+	FICTOAN
+	An intuitive, minimalist responsive HTML+CSS setup
+	for designers just starting to code — just like me.
+	by Sujan Sundareswaran
+	Current version: 1.7.2
+
+	https://github.com/sujan-s/fictoan/
+	http://sujansundareswaran.com/
+-->
+
+
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+
+	<!--A nice, sober serif typeface-->
+	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:500,500i,700,700i" rel="stylesheet">
+	<!--And a clean, simple sans typeface-->
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet">
+	<!-- Also a classy monospace typeface for all you nerds -->
+	<link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/normalize.css" type="text/css" >
+	<link rel="stylesheet" href="css/layout.css" type="text/css" >
+	<link rel="stylesheet" href="css/styles-default.css" type="text/css" />
+
+	<!--  Put your page name here  -->
+	<title>Code Checker</title>
+
+	<style>
+		textarea{
+			width: 100%;
+		}
+		select{
+			width: 100%;
+			height: 30px;
+			background: white;
+		}
+	</style>
+</head>
+
+<body>
+
+<!--  For those fancy full bleed background images
+	  Add the filename in styles-default.css line 76 	-->
+<div class="fullsize-bg"></div>
+
+<!--  This is the parent wrapper 	-->
+	<div class="all-content">
+	
+		<header>
+			<h3 class="text-sans text-red">Think you may have unclosed tags?</h3>
+		</header>
+		<hr>
+		<!-- == 2 COLUMN HALVES =============================================== -->
+
+		<div class="row">
+			<div class="portion half">
+				<h4 class="text-sans margin-bottom-1x">Paste your code in here</h4>
+				<textarea name="code" id="code" cols="30" rows="10" class="text-mono text-tiny bg-dark text-white padding-top-1x padding-right-1x padding-bottom-1x padding-left-1x"></textarea>
+				<h4 class="text-sans margin-bottom-1x">Which tags are we checking?</h4>
+				<form>
+					<select name="all-tags" id="all-tags">
+						<optgroup label="Popular tags">
+							<option value="a">&lt;a&gt;</option>
+							<option value="article">&lt;article&gt;</option>
+							<option value="button">&lt;button&gt;</option>
+							<option value="div">&lt;div&gt;</option>
+							<option value="em">&lt;em&gt;</option>
+							<option value="footer">&lt;footer&gt;</option>
+							<option value="form">&lt;form&gt;</option>
+							<option value="h1">&lt;h1&gt;</option>
+							<option value="h2">&lt;h2&gt;</option>
+							<option value="h3">&lt;h3&gt;</option>
+							<option value="label">&lt;label&gt;</option>
+							<option value="li">&lt;li&gt;</option>
+							<option value="nav">&lt;nav&gt;</option>
+							<option value="p">&lt;p&gt;</option>
+							<option value="span">&lt;span&gt;</option>
+							<option value="script">&lt;script&gt;</option>
+							<option value="section">&lt;section&gt;</option>
+							<option value="strong">&lt;strong&gt;</option>
+							<option value="ul">&lt;ul&gt;</option>
+						</optgroup>
+							<optgroup label="Reclusive tags">
+							<option value="a">&lt;a&gt;</option>
+							<option value="abbr">&lt;abbr&gt;</option>
+							<option value="article">&lt;article&gt;</option>
+							<option value="address">&lt;address&gt;</option>
+							<option value="aside">&lt;aside&gt;</option>
+							<option value="audio">&lt;audio&gt;</option>
+							<option value="b">&lt;b&gt;</option>
+							<option value="bdi">&lt;bdi&gt;</option>
+							<option value="bdo">&lt;bdo&gt;</option>
+							<option value="blockquote">&lt;blockquote&gt;</option>
+							<option value="body">&lt;body&gt;</option>
+							<option value="button">&lt;button&gt;</option>
+							<option value="canvas">&lt;canvas&gt;</option>
+							<option value="caption">&lt;caption&gt;</option>
+							<option value="cite">&lt;cite&gt;</option>
+							<option value="code">&lt;code&gt;</option>
+							<option value="datalist">&lt;datalist&gt;</option>
+							<option value="dd">&lt;dd&gt;</option>
+							<option value="del">&lt;del&gt;</option>
+							<option value="details">&lt;details&gt;</option>
+							<option value="dfn">&lt;dfn&gt;</option>
+							<option value="dialog">&lt;dialog&gt;</option>
+							<option value="div">&lt;div&gt;</option>
+							<option value="dl">&lt;dl&gt;</option>
+							<option value="dt">&lt;dt&gt;</option>
+							<option value="em">&lt;em&gt;</option>
+							<option value="fieldset">&lt;fieldset&gt;</option>
+							<option value="figcaption">&lt;figcaption&gt;</option>
+							<option value="figure">&lt;figure&gt;</option>
+							<option value="footer">&lt;footer&gt;</option>
+							<option value="form">&lt;form&gt;</option>
+							<option value="h1">&lt;h1&gt;</option>
+							<option value="h2">&lt;h2&gt;</option>
+							<option value="head">&lt;head&gt;</option>
+							<option value="header">&lt;header&gt;</option>
+							<option value="html">&lt;html&gt;</option>
+							<option value="i">&lt;i&gt;</option>
+							<option value="iframe">&lt;iframe&gt;</option>
+							<option value="ins">&lt;ins&gt;</option>
+							<option value="kbd">&lt;kbd&gt;</option>
+							<option value="label">&lt;label&gt;</option>
+							<option value="legend">&lt;legend&gt;</option>
+							<option value="map">&lt;map&gt;</option>
+							<option value="mark">&lt;mark&gt;</option>
+							<option value="menu">&lt;menu&gt;</option>
+							<option value="menuItem">&lt;menuItem&gt;</option>
+							<option value="meter">&lt;meter&gt;</option>
+							<option value="nav">&lt;nav&gt;</option>
+							<option value="noscript">&lt;noscript&gt;</option>
+							<option value="object">&lt;object&gt;</option>
+							<option value="ol">&lt;ol&gt;</option>
+							<option value="optgroup">&lt;optgroup&gt;</option>
+							<option value="option">&lt;option&gt;</option>
+							<option value="output">&lt;output&gt;</option>
+							<option value="p">&lt;p&gt;</option>
+							<option value="picture">&lt;picture&gt;</option>
+							<option value="pre">&lt;pre&gt;</option>
+							<option value="progress">&lt;progress&gt;</option>
+							<option value="q">&lt;q&gt;</option>
+							<option value="s">&lt;s&gt;</option>
+							<option value="samp">&lt;samp&gt;</option>
+							<option value="script">&lt;script&gt;</option>
+							<option value="section">&lt;section&gt;</option>
+							<option value="select">&lt;select&gt;</option>
+							<option value="small">&lt;small&gt;</option>
+							<option value="strong">&lt;strong&gt;</option>
+							<option value="style">&lt;style&gt;</option>
+							<option value="sub">&lt;sub&gt;</option>
+							<option value="table">&lt;table&gt;</option>
+							<option value="tbody">&lt;tbody&gt;</option>
+							<option value="td">&lt;td&gt;</option>
+							<option value="textarea">&lt;textarea&gt;</option>
+							<option value="tfoot">&lt;tfoot&gt;</option>
+							<option value="th">&lt;th&gt;</option>
+							<option value="thead">&lt;thead&gt;</option>
+							<option value="time">&lt;time&gt;</option>
+							<option value="tr">&lt;tr&gt;</option>
+							<option value="u">&lt;u&gt;</option>
+							<option value="ul">&lt;ul&gt;</option>
+							<option value="var">&lt;var&gt;</option>
+							<option value="video">&lt;video&gt;</option>
+						</optgroup>
+					</select>
+				</form>
+				<p class="text-center">
+					<a href="#" class="check-code-button button bg-blue shape-rounded">Check your code</a>
+				</p>
+			</div>
+
+			<div class="portion half">
+				<h4 class="text-sans margin-bottom-1x">Here's what we found</h4>
+				<p class="open-tags-count">Opening <strong class="tag-type"></strong> tags: <strong class="tag-count"></strong></p>
+				<p class="close-tags-count">Closing <strong class="tag-type"></strong> tags: <strong class="tag-count"></strong></p>
+				</ul>
+				<div class="success-message bg-green shape-rounded" style="display: none;">
+					<p class="padding-top-2x padding-bottom-2x padding-left-2x padding-right-2x text-white text-sans">Woo hoo, you have no unclosed <strong class="tag-type"></strong> tags</p>
+				</div>
+				<div class="error-message bg-red shape-rounded" style="display: none;">
+					<p class="padding-top-2x padding-bottom-2x padding-left-2x padding-right-2x text-white text-sans">Uh oh, looks like you have unclosed <strong class="tag-type"></strong> tags</p>
+				</div>
+			</div>
+		</div>
+
+
+		<hr>
+
+
+		<!-- == FOOTER ======================================================== -->
+
+		<footer>
+			<div class="row">
+				<p class="text-center text-tiny margin-top-3x">
+					I hope this little app, helped ease your day of troublesome developing.
+				</p>
+			</div>
+		</footer>
+
+	</div> <!-- all-content div ends here -->
+
+
+
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+  <script>
+  	$('.check-code-button').on('click', function(){
+		var code = $('#code').val();
+		var tag = $('#all-tags').val();
+
+		var openTags = code.split('<' + tag).length-1;
+		var closeTags = code.split('</' + tag).length-1;
+
+		$('.tag-type').text('<' + tag + '>');
+
+		$('.open-tags-count .tag-count').text(openTags);
+		$('.close-tags-count .tag-count').text(closeTags);
+
+		if (openTags === closeTags) {
+			$('.success-message').show();
+			$('.error-message').hide();
+		} else{
+			$('.success-message').hide();
+			$('.error-message').show();
+		}
+
+  	});
+  </script>
+
+</body>
